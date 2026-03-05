@@ -1,19 +1,22 @@
 import React from 'react'
 
-export default function MovieCard({ poster, title, year, rating }) {
-  return (<div>
-    <img src={poster} alt="poster" />
-    <div>
+export default function MovieCard({movie}) {
+  const { Poster, Title, Year, Rated, imdbID } = movie
+  console.log(movie);
+  
+  return (<div onClick={() => useFetch(imdbID)} className='w-[20%] border rounded-2xl'>
+    <img src={Poster} alt="poster" />
+    <div className='flex justify-between'>
         <p>Year</p>
-        <p>{year}</p>
+        <p>{Year}</p>
     </div>
-    <div>
+    <div className='flex justify-between'>
         <p>Rating</p>
-        <p>{rating}</p>
+        <p>{Rated}</p>
     </div>
-    <div>
+    <div className='flex justify-between'>
         <p>Title</p>
-        <p>{title}</p>
+        <p>{Title}</p>
     </div>
 
   </div>
