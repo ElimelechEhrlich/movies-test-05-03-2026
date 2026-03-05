@@ -1,12 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router';
 
-export default function MovieCard({movie}) {
-  const { Poster, Title, Year, Rated, imdbID, Genre } = movie
+export default function MoviePageCard({movie}) {
+  const { Poster, Title, Year, Runtime, Rated, imdbID, Genre, Plot } = movie
   const navigate = useNavigate()
   console.log(movie);
   
-  return (<div onClick={e => navigate(`/movie/${imdbID}`)} className='w-[20%] border rounded-2xl'>
+  return (<div  className='w-[20%] border rounded-2xl'>
     <img src={Poster} alt="poster" />
     <div className='flex justify-between'>
         <p>Year</p>
@@ -24,6 +24,7 @@ export default function MovieCard({movie}) {
         <p>Genre</p>
         <p>{Genre}</p>
     </div>
+    <button onClick={e => navigate(`/seats/${imdbID}`)} className='border rounded bg-gray-600 hover:bg-gray-500' >Choose Seat</button>
 
   </div>
   )

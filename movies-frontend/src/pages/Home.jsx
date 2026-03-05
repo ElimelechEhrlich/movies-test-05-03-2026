@@ -1,11 +1,12 @@
-import React from 'react'
 import SearchBar from '../comps/SearchBar'
 import MoviesGrid from '../comps/MoviesGrid'
+import Header from '../comps/Header'
 
 export default function Home() {
-  return (<>
-    <SearchBar/>
-    <MoviesGrid/>
-  </>
-  )
+    return (<>
+        <Header />
+        <SearchBar />
+        <MoviesGrid />
+    </>
+    )
 }
