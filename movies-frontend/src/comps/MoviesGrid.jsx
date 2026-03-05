@@ -1,5 +1,5 @@
 import React from 'react'
-import movies from '../data/movies.json'
+import movies from '../api/fetchMovies.js'
 import MovieCard from './MovieCard'
 
 export default function MoviesGrid() {
